@@ -112,6 +112,13 @@ def watch_slow_stream(description, stream_url, selenium_url, vnc=False):
 # в то время как desktop DevTools лимитируют (через network throttling)
 if __name__ == "__main__":
 
+    # При правильном лимитировании, Twitch должен автоматически снизить качество видео
+    # Сейчас же он запускает видео в 1080p(60fps), даже когда статика грузится 3 минуты+
+    # Конечная скорость напрямую зависит от сервера, проверял на Scaleway
+    # Для эксперимента замелял всю машину через wondershaper - видео сразу же ужимается
+
+    # Необходимо указать адрес работающего Selenoid
+    # И адрес любого стрима, который поддерживает форматы от 160p до 1080p
     watch_slow_stream(
         description='Тест стрима',
         stream_url='https://www.twitch.tv/aoiharu',
