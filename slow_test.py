@@ -41,7 +41,6 @@ def prepare_driver(
             #     'profile.default_content_settings.state.flash': 1,
             #     'profile.content_settings.exceptions.plugins.*,*.setting': 1,
             # },
-            'mobileEmulation': {'networkThrottle': '3G'},
         },
     }
 
