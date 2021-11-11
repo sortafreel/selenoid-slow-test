@@ -14,7 +14,6 @@ def prepare_driver(
     selenium_url="http://localhost:4444/wd/hub",
     screen_resolution=(1920, 1080),
 ):
-    # Set up browser capabilities
     capabilities = {
         "browserName": "chrome",
         "version": "69.0",
